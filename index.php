@@ -14,12 +14,14 @@
   } else if (isset($_GET['hex'])) {
     $hex = $_GET['hex'];
     $dec = intval($hex, 16);
+  } else if (isset($_GET['dec'])) {
+    $dec = intval($_GET['dec'], 10);
   }
   if (isset($dec)) {
     $str_result = sprintf("10進数 %d は、<br>2進数：%b<br>16進数: %x<br>です。",
     $dec, $dec, $dec);
   } else {
-    $str_result = "URLの後ろに ?bin=2進数 あるいは、hex=16進数 のパラメータを付けてアクセスしてみてください。";
+    $str_result = "URLの後ろに ?bin=2進数 か、 hex=16進数、dec=10進数 の変換元の数字を指定してアクセスしてみてください。";
   }
 ?>
 
