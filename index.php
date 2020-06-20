@@ -1,9 +1,10 @@
+<?php include "version.php" ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>数値変換ツール</title>
+  <title>数値変換ツール <?= $version ?></title>
 </head>
 <body>
 <?php
@@ -25,6 +26,14 @@
   }
 ?>
 
+<style>
+.version {
+  text-align: right;
+}
+</style>
+
+<h1>数値変換ツール</h1>
+<p class="version">バージョン <?= $version ?></p>
 <p><?= $str_result ?></p>
 
 </body>
