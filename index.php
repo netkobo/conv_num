@@ -16,7 +16,7 @@
     $dec = intval($hex, 16);
   }
   if (isset($dec)) {
-    $str_result = sprintf("１０進数 %d は、<br>２進数：%b<br>１６進数: %x<br>です。",
+    $str_result = sprintf("10進数 %d は、<br>2進数：%b<br>16進数: %x<br>です。",
     $dec, $dec, $dec);
   } else {
     $str_result = "URLの後ろに ?bin=2進数 あるいは、hex=16進数 のパラメータを付けてアクセスしてみてください。";
