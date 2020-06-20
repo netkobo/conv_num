@@ -1,3 +1,4 @@
+<?php include "function.php" ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,8 +10,8 @@
 <?php
   $dec = null;
   if (isset($_GET['bin'])) {
-    $bin = $_GET['bin'];
-    $dec = intval($bin, 2);
+    $dec = bin_to_dec($_GET['bin']);
+
   }
   if (isset($dec)) {
     $str_result = sprintf("１０進数 %d は、<br>２進数：%b<br>１６進数: %x<br>です。",
